@@ -1,0 +1,33 @@
+/*********************************
+Flex-grid (one-dimensional)
+ **********************************/
+
+@function round-width ($i) {
+  $width : floor(100 * $i * 100/ $grid-columns) / 100; // Round the columns width to a 2 decimal number
+  @return $width#{"%"};
+}
+
+@for $i from 1 through $grid-columns {
+  .col--#{$i} {
+    flex-basis: round-width($i);
+    max-width: round-width($i);
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  @for $i from 1 through $grid-columns {
+    .col--md-#{$i} {
+      flex-basis: round-width($i);
+      max-width: round-width($i);
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  @for $i from 1 through $grid-columns {
+    .col--lg-#{$i} {
+      flex-basis: round-width($i);
+      max-width: round-width($i);
+    }
+  }
+}
