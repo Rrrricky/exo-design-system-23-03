@@ -1,8 +1,8 @@
 import React from 'react';
 
-const ValidationButton = () => (
+const ValidationButton = ({button}) => (
   <button type="submit">
-    Button
+    {button}
   </button>
 );
 

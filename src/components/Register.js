@@ -1,26 +1,49 @@
 import React from 'react'
-import FormField from "./FormField"
-import ValidationButton from "./ValidationButton"
+import FormField from "./form/FormField"
+import ValidationButton from "./form/ValidationButton"
 
 class Register extends React.Component {
   state = {
-    cards: {}
+    title: 'Create Account',
+    subtitle: 'Create a new account',
+    button: 'Create account',
+    fields: {
+      field1: {
+        label: 'name',
+        input: 'Adeline Berte',
+        id: 1
+      },
+      field2: {
+        label: 'email',
+        input: '',
+        id: 2
+      },
+      field3: {
+        label: 'phone',
+        input: '',
+        id: 3
+      },
+      field4: {
+        label: 'password',
+        input: '',
+        id: 4
+      },
+      field5: {
+        label: 'confirm password',
+        input: '',
+        id: 5
+      },
+    }
   }
   render() {
     return (
       <div className="page page-register">
-        <h1>Register</h1>
+        <h1>{this.state.title}</h1>
+        <div>{this.state.subtitle}</div>
         <form>
-          <FormField />
-          <FormField />
-          <ValidationButton />
+          {Object.keys(this.state.fields).map(key => <FormField key={key} index={key} fields={this.state.fields}/>)}
+          <ValidationButton button={this.state.button} />
         </form>
-        {/* <div className="cards flex-grid"> */}
-        {/*
-        <div className="grid">
-          { Object.keys(this.state.cards).map(key => <Card key={key} cards={this.state.cards[key]} removeCard={this.removeCard} index={key} />) }
-        </div>
-        */}
       </div>
     )
   }
