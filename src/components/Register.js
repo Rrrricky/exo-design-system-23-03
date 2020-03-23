@@ -39,7 +39,7 @@ class Register extends React.Component {
     return (
       <div className="page page-register">
         <h1>{this.state.title}</h1>
-        <div>{this.state.subtitle}</div>
+        <div className="form-indication">{this.state.subtitle}</div>
         <form>
           {Object.keys(this.state.fields).map(key => <FormField key={key} index={key} fields={this.state.fields}/>)}
           <ValidationButton button={this.state.button} />

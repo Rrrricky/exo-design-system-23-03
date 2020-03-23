@@ -1,6 +1,6 @@
 :root {
-  --text-base-size: 1.5em;
-  --text-scale-ratio: 1.2;
+  --text-base-size: 1.2em;
+  --text-scale-ratio: 1.25;
 
   /* type scale */
   --text-xs: calc(1em / (var(--text-scale-ratio) * var(--text-scale-ratio)));

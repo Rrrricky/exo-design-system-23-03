@@ -4,9 +4,9 @@ import ValidationButton from "./form/ValidationButton"
 
 class Login extends React.Component {
   state = {
-    title: 'Connection',
-    subtitle: 'Connect to your account',
-    button: 'Connection',
+    title: 'Welcome back',
+    subtitle: 'Sign in to continue',
+    button: 'Login',
     fields: {
       field1: {
         label: 'name',
@@ -39,7 +39,7 @@ class Login extends React.Component {
     return (
       <div className="page page-login">
         <h1>{this.state.title}</h1>
-        <div>{this.state.subtitle}</div>
+        <div className="form-indication">{this.state.subtitle}</div>
         <form>
           {Object.keys(this.state.fields).map(key => <FormField key={key} index={key} fields={this.state.fields}/>)}
           <ValidationButton button={this.state.button} />

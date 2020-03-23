@@ -8,10 +8,12 @@ body {
   flex-direction: column;
   width: 100%;
   height: 100%;
-  font-family: $font-secondary;
+  font-family: $font-body;
   line-height: var(--body-line-height);
   background-color: var(--white);
   color: var(--color-text);
+  text-align: center;
+
 }
 
 
@@ -29,19 +31,21 @@ body {
 }
 
 h1, .text--xxl {
-  font-size: var(--text-xxl);
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-xs-fixed);
+  font-family: $font-heading;
 }
 
 h2, .text--xl {
-  font-size: var(--text-xl);
+  font-size: var(--text-md);
 }
 
 h3, .text--lg {
-  font-size: var(--text-lg);
+  font-size: var(--text-md);
 }
 
 h4, .text--md {
-  font-size: var(--text-md);
+  font-size: var(--text-sm);
 }
 
 .text--sm, small {
@@ -63,7 +67,7 @@ h4, .text--md {
  ********************/
 
 h1, h2, h3, h4, form legend {
-  margin-bottom: var(--space-xxs);
+  // margin-bottom: var(--space-xxs);
   line-height: var(--heading-line-height);
 }
 
@@ -90,43 +94,6 @@ h1, h2 {
   color: var(--color-text-heading);
 }
 
-.icon {
-  color: var(--color-icon-primary);
-
-  &:hover {
-    color: var(--gray-6);
-  }
-}
-
-/********************
-_                       _
-(_) ___ ___  _ __    ___(_)_______
-| |/ __/ _ \| '_ \  / __| |_  / _ \
-| | (_| (_) | | | | \__ \ |/ /  __/
-|_|\___\___/|_| |_| |___/_/___\___|
-
-********************/
-
-.icon--xs {
-  font-size: var(--icon-xs);
-}
-
-.icon--sm {
-  font-size: var(--icon-sm);
-}
-
-.icon--md {
-  font-size: var(--icon-md);
-}
-
-.icon--lg {
-  font-size: var(--icon-lg);
-}
-
-.icon--xl {
-  font-size: var(--icon-xl);
-}
-
 
 /********************
  _           _   _
@@ -141,11 +108,12 @@ _                       _
   display: inline-flex;
   align-items: center;
   position: relative;
+  height: 50px;
   white-space: nowrap;
   text-decoration: none;
   line-height: 1;
 
-  padding: var(--space-xs) var(--space-sm);
+  // padding: var(--space-sm) var(--space-sm);
   border-radius: var(--btn-radius);
   font-size: var(--btn-font-size);
   color: var(--color-link);
@@ -156,10 +124,8 @@ _                       _
     transition: none;
   }
 
-  .icon {
-    color: inherit;
-    flex-shrink: 0;
-    margin-left: var(--space-xs);
+  &:hover {
+    cursor: pointer;
   }
 }
 
@@ -168,6 +134,7 @@ _                       _
 .btn--primary {
   background-color: var(--btn-primary-bg);
   color: var(--btn-primary-label);
+  text-transform: uppercase;
   @include fontSmooth;
 
   &:visited {
@@ -180,39 +147,6 @@ _                       _
 
   &:active {
     background-color: var(--btn-primary-active);
-  }
-}
-
-.btn--secondary {
-  // subtle version, used for secondary actions or in combo with primary/accent button
-  background-color: var(--btn-secondary-bg);
-  color: var(--btn-secondary-label);
-
-  &:visited {
-    color: var(--btn-secondary-label);
-  }
-
-  &:active {
-    background-color: var(--btn-secondary-active);
-  }
-}
-
-.btn--accent {
-  // used to draw special attention to the button (e.g. destructive actions)
-  background-color: var(--btn-accent-bg);
-  color: var(--btn-accent-label);
-  @include fontSmooth;
-
-  &:visited {
-    color: var(--btn-accent-label);
-  }
-
-  &:hover {
-    background-color: var(--btn-accent-hover);
-  }
-
-  &:active {
-    background-color: var(--btn-accent-active);
   }
 }
 

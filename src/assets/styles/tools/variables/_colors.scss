@@ -1,73 +1,51 @@
 :root {
   /* main colors */
-  @include defineColorHSL(--color-primary-darker, 220, 90%, 36%);
-  @include defineColorHSL(--color-primary-dark, 220, 90%, 46%);
-  @include defineColorHSL(--color-primary, 220, 90%, 56%);
-  @include defineColorHSL(--color-primary-light, 220, 90%, 66%);
-  @include defineColorHSL(--color-primary-lighter, 220, 90%, 76%);
-
-  @include defineColorHSL(--color-accent-darker, 355, 90%, 36%);
-  @include defineColorHSL(--color-accent-dark, 355, 90%, 46%);
-  @include defineColorHSL(--color-accent, 355, 90%, 56%);
-  @include defineColorHSL(--color-accent-light, 355, 90%, 66%);
-  @include defineColorHSL(--color-accent-lighter, 355, 90%, 76%);
-
-  /* shades - generated using chroma.js */
-  --black: #1d1d21;
-  --gray-10: #2e2e31;
-  --gray-6: #7b7a7d;
-  --gray-4: #a5a5a6;
-  --gray-3: #bbbbbc;
-  --gray-2: #d1d0d2;
-  --gray-1: #e8e7e8;
-  --white: white;
+  --color-primary-dark: #410675;
+  --color-primary-medium: #4b0785;
+  --color-primary-default: #58089d;
+  --color-primary-light: #ac83ce;
+  --color-primary-lighter: #d5c1e6;
+  --color-primary-lightest: #eee7f5;
 
   /* feedback */
-  --color-success: #88c459;
-  --color-error: #f5414f;
-  --color-warning: #ffd137;
+  --color-success: #3cc13b;
+  --color-error: #f03738;
+
+  /* shades */
+  --black-default: #000;
+  --black-light: rgba(0, 0, 0, .5);
+  --black-lighter: rgba(0, 0, 0, .25);
+  --black-lightest: rgba(0, 0, 0, .1);
+  --black-extra-light: rgba(0, 0, 0, .05);
+  --white-default: #fff;
+  --white-light: rgba(255, 255, 255, .7);
 
   /* typography */
-  --color-text: var(--gray-10);
-  --color-text-heading: var(--black);
-  --color-text-subtle: var(--gray-6);
-  --color-link: var(--color-primary);
-  --color-link-visited: var(--color-primary-dark);
-  --color-mark: var(--color-accent-dark);
-  --color-blockquote-border: var(--gray-2);
+  --color-text: var(--black-default);
+  --color-text-heading: var(--black-default);
+  --color-text-subtle: var(--black-light);
+  --color-link: var(--primary-default);
+  --color-link-visited: var(--primary-medium);
 
   /* border */
-  --color-border: var(--gray-2);
+  --color-border: var(--black-lightest);
 
   /* body */
-  --color-body: var(--white);
+  --color-body: var(--white-default);
 
   /* forms */
   --form-element-border: var(--color-border);
-  --form-element-border-focus: var(--color-primary);
+  --form-element-border-focus: var(--color-primary-default);
   --form-element-border-error: var(--color-error);
-  --form-element-bg: var(--white);
-  --form-text-placeholder: var(--gray-4);
+  --form-element-bg: var(--white-default);
+  --form-element-radius: .5em;
 
   /* buttons */
-  --btn-primary-bg: var(--color-primary);
-  --btn-primary-hover: var(--color-primary-light);
+  --btn-primary-bg: var(--color-primary-default);
+  --btn-primary-hover: var(--color-primary-medium);
   --btn-primary-active: var(--color-primary-dark);
-  --btn-primary-label: var(--white);
+  --btn-primary-label: var(--white-default);
 
-  --btn-secondary-bg: var(--gray-1);
-  --btn-secondary-active: var(--gray-2);
-  --btn-secondary-label: var(--gray-10);
-
-  --btn-accent-bg: var(--color-accent);
-  --btn-accent-hover: var(--color-accent-light);
-  --btn-accent-active: var(--color-accent-dark);
-  --btn-accent-label: var(--white);
-
-  --btn-disabled-bg: var(--gray-2);
-  --btn-disabled-label: var(--gray-10);
-
-  /* icons */
-  --color-icon-primary: var(--gray-10);
-  --color-icon-secondary: inherit;
+  --btn-disabled-bg: var(--black-lighter);
+  --btn-disabled-label: var(--white-default);
 }

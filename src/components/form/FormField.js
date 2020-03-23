@@ -1,9 +1,9 @@
 import React from 'react';
 
 const FormField = ({fields, index}) => (
-  <div>
+  <div className="field-component">
     <label htmlFor="">{fields[index].label}</label>
-    <input style={{ border: `1px solid black`, padding: `2px` }} type="text" />
+    <input type="text" />
   </div>
 );
 
